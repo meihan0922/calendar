@@ -1,0 +1,66 @@
+.button {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  line-height: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bold;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.button.bd_red {
+  background-color: #fff;
+  font-size: 16px;
+  color: #ff635e;
+  border-color: #ff635e;
+  border: #ff635e solid 1px;
+  text-decoration: none;
+}
+
+.button.bd_red:hover {
+  color: #fff;
+  background-color: #ff635e;
+  border-color: #ff635e;
+}
+
+.button.bd_gray {
+  background-color: #fff;
+  font-size: 16px;
+  color: #666;
+  border: #cccccc solid 1px;
+  text-decoration: none;
+}
+
+.button.bd_gray:hover {
+  color: #fff;
+  background-color: #ff635e;
+  border-color: #ff635e;
+}
+
+.button.tiny {
+  font-size: 12px;
+  line-height: 15px;
+  padding: 5px;
+  color: #666;
+  border: #cccccc solid 1px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button.bd_none {
+  font-size: 16px;
+  color: #666;
+  padding: 10px;
+}
+
+.button.bg_red {
+  background-color: #ff635e;
+  border-color: #ff635e;
+  color: #fff;
+}
+/*# sourceMappingURL=css.css.map */

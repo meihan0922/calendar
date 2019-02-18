@@ -1,0 +1,398 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.App {
+  width: 938px;
+  height: 650px;
+  margin: auto;
+}
+
+.header {
+  margin-bottom: 5px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header a {
+  color: #0077b3;
+}
+
+.header .text {
+  border-bottom: 1px dashed #e3e3e3;
+  margin-left: 5px;
+  pointer-events: none;
+}
+
+.main {
+  width: 464px;
+  height: 600px;
+  padding: 0 5px;
+  margin-left: 100px;
+}
+
+.monthHeader {
+  background: #ede9dd;
+  width: 464px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.monthHeader ul {
+  float: left;
+  width: calc(100% - 40px);
+  height: 100%;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.monthHeader ul li {
+  cursor: pointer;
+  width: 33.33%;
+  display: inline-block;
+  text-align: center;
+  height: 100%;
+  padding: 0 3px;
+  border-top: 3px solid #ede9dd;
+}
+
+.monthHeader ul .activeHeader {
+  background: #fff;
+  color: #e10500;
+}
+
+.monthHeader ul a {
+  pointer-events: none;
+  color: #666;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.monthHeader ul a .month {
+  font-size: 16px;
+  line-height: 45px;
+  vertical-align: middle;
+}
+
+.monthHeader .prev, .monthHeader .next {
+  width: 20px;
+  height: 100%;
+  float: left;
+  color: transparent;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.monthHeader .prev::before, .monthHeader .next::before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  display: inline-block;
+  top: calc(50% - 8px);
+  right: calc(50% - 3px);
+}
+
+.monthHeader .prev::before {
+  border-width: 7px 7px 7px 0;
+  border-color: transparent #e10500 transparent transparent;
+}
+
+.monthHeader .next::before {
+  border-width: 7px 0 7px 7px;
+  border-color: transparent transparent transparent #e10500;
+}
+
+.calendar {
+  width: 464px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  height: 550px;
+}
+
+.calendar thead {
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.calendar .week {
+  width: 100%;
+  border-color: inherit;
+  vertical-align: inherit;
+  height: 32px;
+  border: 1px solid #eee;
+  border-top: none;
+}
+
+.calendar .week th {
+  width: calc(100%/7);
+  line-height: 30px;
+  color: #666;
+  background: #fff;
+  font-weight: bold;
+}
+
+.calendar tbody tr {
+  width: 100%;
+  border: 1px solid #eee;
+  border-top: none;
+  display: table-row;
+}
+
+.calendar tbody td {
+  cursor: pointer;
+  padding: 0;
+  width: calc(100% / 7);
+  border: 1px solid #eee;
+}
+
+.calendar tbody td:hover {
+  background-color: #fff9e3;
+}
+
+.calendar tbody .day {
+  pointer-events: none;
+  border-left: none;
+  border-bottom: none;
+  position: relative;
+  height: 85px;
+  padding: 0 3px;
+  font-size: 12px;
+  line-height: 16px;
+  display: block;
+}
+
+.calendar tbody .day .num {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  color: #444;
+}
+
+.calendar tbody .day .tip {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  padding: 0 3px;
+  width: 40px;
+  height: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  background: #fe8400;
+}
+
+.calendar tbody .day .details {
+  padding-top: 22px;
+}
+
+.calendar tbody .day .sell, .calendar tbody .day .group {
+  display: inline-block;
+  width: 100%;
+  color: #666;
+}
+
+.active {
+  border: 2px solid #66bb3c;
+  background-color: #fff9e3;
+}
+
+.statusGreen {
+  color: #1c9c9d;
+}
+
+.statusOrange {
+  color: #fe8400;
+}
+
+.price {
+  color: #e10500;
+}
+
+.disabled {
+  background: #f8f8f8;
+  cursor: default;
+  height: 85px;
+  border: none;
+}
+
+.visibility {
+  visibility: hidden;
+}
+
+.list {
+  width: 464px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  height: 550px;
+}
+
+.list tbody tr {
+  display: block;
+  position: relative;
+  border: none;
+  height: 100%;
+}
+
+.list tbody td {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  padding: 0;
+  border-style: solid;
+  border-color: transparent #e3e3e3 #e3e3e3;
+  border-width: 1px;
+}
+
+.list tbody td:hover {
+  border: 1px solid #66bb3c;
+  background-color: #fff9e3;
+}
+
+.list tbody .active {
+  border: 1px solid #66bb3c;
+  background-color: #fff9e3;
+}
+
+.list tbody .day {
+  pointer-events: none;
+  width: 100%;
+  height: 62px;
+}
+
+.list tbody .day .listDay, .list tbody .day .details, .list tbody .day .listRight {
+  pointer-events: none;
+  height: 100%;
+  display: table-cell;
+  vertical-align: top;
+  list-style: none;
+  color: #666;
+  padding: 5px;
+}
+
+.list tbody .day .listDay {
+  float: left;
+  text-align: center;
+  font-size: 24px;
+  padding-top: 0;
+}
+
+.list tbody .day .listDay .weekday {
+  margin-top: -5px;
+  display: block;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.list tbody .day .num {
+  position: static;
+}
+
+.list tbody .day .details {
+  margin: 0;
+  padding: 5px;
+  height: 100%;
+}
+
+.list tbody .day .details .liContent {
+  display: block;
+  padding-bottom: 5px;
+}
+
+.list tbody .day .details .liContent span {
+  margin-right: 30px;
+}
+
+.list tbody .day .details .sell, .list tbody .day .details .group {
+  width: auto;
+  margin-right: 30px;
+}
+
+.list tbody .day .details .tip {
+  position: static;
+  display: block;
+  padding: 0 3px;
+  width: 40px;
+  height: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  background: #fe8400;
+  margin-top: 5px;
+}
+
+.list tbody .day .listRight {
+  text-align: center;
+  width: 1%;
+  white-space: nowrap;
+}
+
+.list tbody .day .listRight span {
+  display: block;
+  text-align: right;
+  font-size: 16px;
+}
+
+.pageCounter {
+  position: absolute;
+  width: 100%;
+  display: table;
+  bottom: 0px;
+}
+
+.pageCounter a {
+  width: 1%;
+  white-space: nowrap;
+  display: table-cell;
+  color: #0077b3;
+  text-decoration: none;
+  background: transparent;
+}
+
+.pageCounter a .arrowLeft, .pageCounter a .arrowRight {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  vertical-align: middle;
+  margin-top: -3px;
+}
+
+.pageCounter a .arrowLeft {
+  margin-right: 5px;
+  border-width: 4.5px 5px 4.5px 0;
+  border-color: transparent #24a07c transparent transparent;
+}
+
+.pageCounter a .arrowRight {
+  margin-left: 5px;
+  border-width: 4.5px 0 4.5px 5px;
+  border-color: transparent transparent transparent #24a07c;
+}
+
+.pageCounter .showPage {
+  width: 70%;
+  display: table-cell;
+  text-align: center;
+}
+/*# sourceMappingURL=calendar.css.map */
